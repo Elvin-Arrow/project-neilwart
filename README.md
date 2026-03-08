@@ -135,3 +135,9 @@ Use the `--net=host` flag.
 ```bash
 docker run --rm --net=host -v $(pwd):/data voidwalker07/jesinia /data/your_document.pdf --provider ollama
 ```
+
+#### 7. Hardware Acceleration (NVIDIA GPUs)
+If you have an NVIDIA GPU, you can pass the `--gpus all` flag to the container to speed up local extraction workloads (note: this requires installing the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit) on your host machine).
+```bash
+docker run --rm --gpus all -v $(pwd):/data voidwalker07/jesinia /data/your_document.pdf
+```
